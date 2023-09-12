@@ -1,0 +1,82 @@
+@import "../../../mixins.scss";
+
+.heroBanner {
+    width: 100%;
+    height: 450px;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include md {
+        height: 700px;
+    }
+    .backdrop-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        overflow: hidden;
+        .lazy-load-image-background {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+    .opacity-layer {
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(
+            180deg,
+            rgba(4, 21, 45, 0) 0%,
+            #04152d 79.17%
+        );
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .heroBannerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        text-align: start;
+        position: absolute;
+        left: 120px;
+        max-width: 500px;
+        margin: 0 auto;
+        .title {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 10px;
+    
+            @include md {
+                margin-bottom: 10px;
+                font-size: 30px;
+            
+            }
+        }
+        .c1 {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 10px;
+        }
+        .subTitle {
+            font-size: 15px;
+            font-weight: 200;
+            margin-bottom: 20px;
+            @include md {
+                font-size: 20px;
+            }
+        }
+       
+    }
+}
