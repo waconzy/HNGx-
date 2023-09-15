@@ -30,10 +30,9 @@ const DetailsBanner = ({ video, crew }) => {
         (f) => f.job === "Screenplay" || f.job === "Story" || f.job === "Writer"
     );
 
-    const toHoursAndMinutes = (totalMinutes) => {
-        const hours = Math.floor(totalMinutes / 60);
-        const minutes = totalMinutes % 60;
-        return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
+    const toMinutes = (totalMinutes) => {
+        const minutes = totalMinutes;
+        return `${minutes > 0 ? ` ${minutes}m` : ""}`;
     };
 
     return (
@@ -136,7 +135,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                         Runtime:{" "}
                                                     </span>
                                                     <span className="text" data-testid='movie-runtime'>
-                                                        {toHoursAndMinutes(
+                                                        {toMinutes(
                                                             data.runtime
                                                         )}
                                                     </span>
