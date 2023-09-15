@@ -125,7 +125,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                     <span className="text" data-testid='movie-release-date'>
                                                         {dayjs(
                                                             data.release_date
-                                                        ).format("MMM D, YYYY")}
+                                                        ).format("")}
                                                     </span>
                                                 </div>
                                             )}
