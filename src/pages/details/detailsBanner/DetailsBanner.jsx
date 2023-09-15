@@ -65,7 +65,7 @@ const DetailsBanner = ({ video, crew }) => {
                                         )}
                                     </div>
                                     <div className="right">
-                                        <div className="title">
+                                        <div className="title" data-testid='movie-title'>
                                             {`${
                                                 data.name || data.title
                                             } (${dayjs(
@@ -102,7 +102,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             <div className="heading">
                                                 Overview
                                             </div>
-                                            <div className="description">
+                                            <div className="description" data-testid='movie-overview'>
                                                 {data.overview}
                                             </div>
                                         </div>
@@ -123,7 +123,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                     <span className="text bold">
                                                         Release Date:{" "}
                                                     </span>
-                                                    <span className="text">
+                                                    <span className="text" data-testid='movie-release-date'>
                                                         {dayjs(
                                                             data.release_date
                                                         ).format("MMM D, YYYY")}
@@ -135,7 +135,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                     <span className="text bold">
                                                         Runtime:{" "}
                                                     </span>
-                                                    <span className="text">
+                                                    <span className="text" data-testid='movie-runtime'>
                                                         {toHoursAndMinutes(
                                                             data.runtime
                                                         )}
