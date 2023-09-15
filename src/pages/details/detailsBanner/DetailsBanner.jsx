@@ -67,7 +67,7 @@ const DetailsBanner = ({ video, crew }) => {
                                         <div className="title" data-testid='movie-title'>
                                             {`${
                                                 data.name || data.title
-                                            } }
+                                            }` }
                                         </div>
                                         <div className="subtitle">
                                             {data.tagline}
