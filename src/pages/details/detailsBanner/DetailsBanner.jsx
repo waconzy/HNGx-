@@ -120,7 +120,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             {data.release_date && (
                                                 <div className="infoItem">
                                                     <span className="text bold">
-                                                        Release Date:{" "}
+                                                        
                                                     </span>
                                                     <span className="text" data-testid='movie-release-date'>
                                                         {dayjs(
@@ -132,7 +132,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             {data.runtime && (
                                                 <div className="infoItem">
                                                     <span className="text bold">
-                                                        Runtime:{" "}
+                                                        
                                                     </span>
                                                     <span className="text" data-testid='movie-runtime'>
                                                         {toMinutes(
