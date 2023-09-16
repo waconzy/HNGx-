@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const BASE_URL = "https://api.themoviedb.org/3";
-const TMDB_TOKEN = import.meta.env.VITE_APP_TMDB_TOKEN;
+const BASE_URL = 'https://api.themoviedb.org/3/movie/11?api_key=b724b4c18ec7299caa9b46a8300effa2';
+
 
 const headers = {
-    Authorization: "bearer " + TMDB_TOKEN,
+    Authorization: "bearer " + api_key,
 };
 
 export const fetchDataFromApi = async (url, params) => {
